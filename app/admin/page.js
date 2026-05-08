@@ -1,6 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
-import CRMApp from '@/components/CRMApp';
+import dynamic from 'next/dynamic';
+
+const CRMApp = dynamic(() => import('@/components/CRMApp'), {
+  ssr: false,
+  loading: () => (
+    <div style={{ minHeight:'100vh', background:'#0C0C0E', display:'flex', alignItems:'center', justifyContent:'center' }}>
+      <div style={{ fontFamily:"'Bebas Neue',cursive", fontSize:28, color:'#F5C300', letterSpacing:'.1em' }}>CARGANDO CRM...</div>
+    </div>
+  )
+});
 
 const ADMIN_PASS = 'factoria2025';
 const Y = '#F5C300';

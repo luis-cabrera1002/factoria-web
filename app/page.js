@@ -1,7 +1,9 @@
 'use client';
 import { useState } from 'react';
-import PublicPage from '@/components/PublicPage';
-import CRMApp from '@/components/CRMApp';
+import dynamic from 'next/dynamic';
+
+const PublicPage = dynamic(() => import('@/components/PublicPage'), { ssr: false });
+const CRMApp = dynamic(() => import('@/components/CRMApp'), { ssr: false });
 
 export default function Home() {
   const [view, setView] = useState('public');
