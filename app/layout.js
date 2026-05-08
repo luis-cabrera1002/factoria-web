@@ -3,6 +3,9 @@ import './globals.css';
 export const metadata = {
   title: 'Factoría de Ideas – Soluciones Digitales con IA',
   description: 'Desarrollo web, apps móviles y automatización con IA para PyMEs en Guatemala, Centroamérica y España.',
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'Factoría de Ideas – Soluciones Digitales con IA',
     description: 'Hacemos realidad tus ideas digitales.',
