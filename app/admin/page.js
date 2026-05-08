@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import CRMApp from '@/components/CRMApp';
 
-const ADMIN_PASS = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'factoria2025';
+const ADMIN_PASS = 'factoria2025';
 const Y = '#F5C300';
 const DK = '#0C0C0E';
 
