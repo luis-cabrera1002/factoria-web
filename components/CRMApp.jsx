@@ -1,6 +1,12 @@
 'use client';
 // ═══ Factoría de Ideas · CRM v4 · Dark Graffiti · Prices Editor · ProcessView
 import { useState, useEffect, useRef } from 'react';
+import dynamic from 'next/dynamic';
+
+const WorkspaceView = dynamic(() => import('@/components/WorkspaceView'), { ssr: false });
+const GanttView     = dynamic(() => import('@/components/GanttView'),     { ssr: false });
+const QuoteView     = dynamic(() => import('@/components/QuoteView'),     { ssr: false });
+const ProcessView   = dynamic(() => import('@/components/ProcessView'),   { ssr: false });
 const LOGO = '/uploads/Logo oficial FDI para registrar-de13ff70.png';
 const CY = '#F5C300', CDK = '#0C0C0E', CINK = '#1A1A1F', CBG = '#0F0F12', CCARD = '#16161C';
 
