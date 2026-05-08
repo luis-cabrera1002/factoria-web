@@ -1,9 +1,9 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = process.env.CONTACT_EMAIL || 'luisan.cabrera@gmail.com';
 
 export async function POST(request) {
+  const resend = new Resend(process.env.RESEND_API_KEY || 'placeholder_configure_in_vercel');
   try {
     const body = await request.json();
     const { name, email, company, service, message } = body;
